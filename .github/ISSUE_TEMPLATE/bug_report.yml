@@ -1,0 +1,79 @@
+name: Bug Report
+description: Report a bug or unexpected behavior in our DELTARUNE 3DS port.
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: checkboxes
+    id: before-submit
+    attributes:
+      label: Before you submit
+      description: Please confirm that you have completed the following checks.
+      options:
+        - label: I have read the README.
+          required: true
+        - label: I have checked existing and closed issues to make sure this bug has not already been reported.
+          required: true
+        - label: I am using the latest available version.
+          required: true
+        - label: I have ticked the checkboxes without reading.
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform(s)
+      description: Please specify the platform(s) you encountered the bug on.
+      multiple: true
+      options:
+        - 2DS / 3DS
+        - new 2DS / new 3DS
+        - Emulator
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Bug category
+      description: What type of bug are you reporting?
+      multiple: false
+      options:
+        - Crash
+        - Visual
+        - Audio
+        - Save/data
+        - Patching with .xdelta files
+        - Performance
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of the bug
+      description: A clear and concise description of what the bug is.
+      placeholder: What happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: To reproduce
+      description: Steps to reproduce the unexpected behavior, if known.
+      placeholder: |
+        1. Start the game...
+        2. Go to...
+        3. Perform...
+    validations:
+      required: false
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments
+      description: If applicable, please add pictures or videos to help explain your problem.
+      placeholder: Drag and drop images or videos here.
+    validations:
+      required: false

@@ -1,0 +1,46 @@
+name: Feature Request
+description: Ask us for a new feature you would like to see in our DELTARUNE 3DS port.
+title: "[Feature] "
+labels:
+  - feature
+body:
+  - type: checkboxes
+    id: before-submit
+    attributes:
+      label: Before you submit
+      description: Please confirm that you have completed the following checks.
+      options:
+        - label: I have read the README.
+          required: true
+        - label: I have checked existing and closed issues to make sure this feature has not already been requested.
+          required: true
+        - label: I am using the latest available version.
+          required: true
+        - label: I have ticked the checkboxes without reading.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What would you like to be added?
+      description: A clear and concise description of your idea.
+    validations:
+      required: true
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments
+      description: If your feature is about UI or related to any visual aspect of the game, it would be amazing if you could provide pictures or videos to help us getting a better idea of what you want.
+      placeholder: Drag and drop images or videos here.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: befire-submit-2
+    attributes:
+      label: Consent
+      options:
+        - label: I understand that feature requests are not guaranteed to be implemented. The development team may decline a request if it is technically infeasible, would require too much development time, or does not fit the project's goals.
+          required: true
+        - label: I understand that it may take some time before the feature I am requesting is implemented.
+          required: true
