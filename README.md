@@ -207,3 +207,5 @@ You can still make a [feature request](https://github.com/LinkTroisUn/DELTARUNE-
 - [boost](https://www.boost.org/), a large C++ library.
 
 - 3ds-libogg and 3ds-libvorbisidec, 3DS portlibs used to decode OGG audio files.
+
+- [OpenDSP](https://github.com/Cellenseres/OpenDSP), an open source 3DS DSP firmware, used as fallback when the original DSP firmware is missing.
