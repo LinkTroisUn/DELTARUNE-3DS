@@ -30,6 +30,8 @@ We've also implemented some cool additional features:
 
 - Second-screen minimap (WIP).
 
+- 3D (WIP)
+
 Additionally, our port is fully cross-compatible with the PC version of the game! This means you can drop your save files into `sdmc:/DELTARUNE/` to continue your adventure!
 
 ## DISCLAIMER
@@ -106,13 +108,19 @@ Congratulations! You are ready to play.
 
 - Screen swapping: Pressing START swaps the top and bottom screens. As a safety measure, touch controls are disabled when the main screen is on top and re-enabled when the main screen is on the bottom.
 
+- 3D toggle: Press SELECT+X to toggle 3D and WIDE modes. This is available only on consoles that support it (not the 2DS).
+
+- Frame skipping: Pressing SELECT+B tells the game to not wait for everything to have been drawn on screens before executing the next logic step. This can lead to lower FPS on o3DS, but better input latency, although the effect might be negligible with the recent performance improvements.
+
+- Lower screen toggle: Press SELECT+A to disable/enable the lower screen. Disabling it can help to have better performances on o3DS, although it still runs very well when active.
+
 Pressing SELECT + L/R triggers a special action.
 
 The L button is associated with "loading", while the R button is associated with "recording".
 
 The action associated with the button you release first (SELECT or L/R) will be performed.
 
-- Savestates: If L/R is released first, the game will attempt to Load (or Record) a savestate. A keyboard prompting for a number will appear. It corresponds to a savestate slot (you can have many; they are stored in `sdmc:/DELTARUNE/savestate*`). The game will then freeze for about 10 to 30 seconds before resuming. Savestates are very tied to a specific build version. Not all updates break compatibility with older savestates, but it may happen easily. If an existing savestate gets immediately rejected, it probably means it's too old.
+- Savestates: If L/R is released first, the game will attempt to Load (or Record) a savestate. A keyboard prompting for a number will appear. It corresponds to a savestate slot (you can have many; they are stored in `sdmc:/DELTARUNE/3DS.savestate*`). The game will then freeze for about 10 to 30 seconds before resuming. Savestates are very tied to a specific build version. Not all updates break compatibility with older savestates, but it may happen easily. If an existing savestate gets immediately rejected, it probably means it's too old.
 <details><summary>Savestates usage demo</summary>
 
 
@@ -126,6 +134,13 @@ https://github.com/user-attachments/assets/06f91194-1a6d-44e4-ac0f-0d602c8ed398
 
 
 https://github.com/user-attachments/assets/1f185e8c-bb67-45fb-81e7-3859f5662f6c
+
+
+#### Advices regarding 3D
+
+To use 3D, hold the console somewhere stable, in front of you, not too close and not too far. Then, activate the 3D with the key combo (SELECT+X), the slider fully up. The game now renders in 3D, which is an optical illusion. As with every optical illusions, it hurts as long as your brain and eyes have not yet adapted to it. If after a few seconds, your vision has still not adapted, fully lower the slider, close an eye, then pull up then down the slider several times, and notice what moves on the screen as you do it. Then, open the other eye and see if now feels better. Those steps can be interleaved and repeated depending on what fits you best.
+
+One last thing about 3D: avoid changing your vision configuration (adapted to the 3D, adapted to the real world) too often, as doing so can rapidly induce headaches or eye strain. In addition, as 3D is still a WIP, there may be moments when your brain says "that thing is on the front" while the illusion says "that thing is behind". This mismatch hurts, so either lower the 3D strength or disable 3D when it happens for too long.
 
 
 </details>
@@ -157,6 +172,8 @@ As for savestates, if for some reason you decide to play both the .3dsx and .cia
 - porting Chapter 2;
 
 - patching bugs reported by players in Chapter 1 and the Menu;
+
+- finishing our 3D feature for Chapter 1;
 
 - finishing our minimap feature for Chapter 1.
 
@@ -203,8 +220,6 @@ You can still make a [feature request](https://github.com/LinkTroisUn/DELTARUNE-
 - [nlohmann/json](https://github.com/nlohmann/json), C++ library for reading/writing JSON files.
 
 - [magic_enum](https://github.com/Neargye/magic_enum), C++ library providing static reflection for enums.
-
-- [boost](https://www.boost.org/), a large C++ library.
 
 - 3ds-libogg and 3ds-libvorbisidec, 3DS portlibs used to decode OGG audio files.
 

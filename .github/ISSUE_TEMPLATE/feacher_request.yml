@@ -14,7 +14,7 @@ body:
           required: true
         - label: I have checked existing and closed issues to make sure this feature has not already been requested.
           required: true
-        - label: I am using the latest available version.
+        - label: I am using the latest available version (1.0.1).
           required: true
         - label: I have ticked the checkboxes without reading.
 
